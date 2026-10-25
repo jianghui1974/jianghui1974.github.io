@@ -13,27 +13,36 @@ GitHub Pages 的用户站点，对应 <https://jianghui1974.github.io/>。
 ## 文件
 
 ```
-index.html        主页（单页，无构建步骤）
-styles.css        全部样式，含深色模式
+index.html        中文主页（默认，挂在根域名）
+en/index.html     英文主页，同一套版式与样式
+styles.css        全部样式，含深色模式、页脚
 assets/mark.svg   站点标记（蓝 + 青两个方块）与 favicon
-assets/og.png     分享卡片图 1200×630
+assets/og.png     中文分享卡片图 1200×630
+assets/og-en.png  英文分享卡片图
 assets/*-icon.png 两个产品的图标（从各自站点取，256px / 180px）
 og.html           og.png 的源文件，用浏览器截图得到，不对外链接
+og-en.html        og-en.png 的源文件
 preview-*.png     本地预览截图，已 gitignore
 ```
+
+中英两页是**两份独立 HTML**（和两个产品的站点一样，不用 JS 切语言），
+靠 `<link rel="alternate" hreflang>` 互相标注，页头右上角各有一次互链：
+中文页 `en/`，英文页 `../`。改文案时两页都要改。
 
 ## 改内容
 
 - 文案、链接：直接改 `index.html`
 - 颜色、间距：`styles.css` 顶部的 `:root` 变量；两个产品色是 `--quileg` 与 `--guyun`
 - 产品图标换了：从对应站点下载新图标，覆盖 `assets/` 下的同名文件
-- 分享图改了：改 `og.html`，然后重新截图
+- 分享图改了：改 `og.html` / `og-en.html`，然后重新截图
+- 页脚的联系方式、作者主页在 `index.html` 与 `en/index.html` 的 `<footer>` 里，两处一起改
 
 ```bash
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars \
   --window-size=1200,630 --force-device-scale-factor=1 \
   --screenshot="assets/og.png" "file://$PWD/og.html"
+# 英文版换 og-en.html / assets/og-en.png
 ```
 
 （`--no-sandbox` 是因为这是在沙箱里跑 Chrome；在普通终端里可以去掉。）

@@ -16,7 +16,13 @@
 <meta property="og:description" content="Quileg HID：让 AI 真正操作你的 iPhone。孤云 Guyun：把文件存进你自己的对象存储。">
 <meta property="og:url" content="https://jianghui1974.github.io/">
 <meta property="og:image" content="https://jianghui1974.github.io/assets/og.png">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jianghui1974.github.io/assets/og.png">
+<link rel="alternate" hreflang="zh-Hans" href="https://jianghui1974.github.io/">
+<link rel="alternate" hreflang="en" href="https://jianghui1974.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://jianghui1974.github.io/">
 </head>
 <body>
 
@@ -33,6 +39,7 @@
       <a href="#how">做法</a>
       <a href="#about">关于</a>
       <a class="gh" href="https://github.com/jianghui1974">GitHub</a>
+      <a class="lang" href="en/" hreflang="en" lang="en">English</a>
     </nav>
   </div>
 </header>
@@ -172,12 +179,44 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <p class="copy">© 2026 Jianghui</p>
-    <nav>
-      <a href="https://jianghui1974.github.io/Quileg-HID/">Quileg HID</a>
-      <a href="https://jianghui1974.github.io/Guyun/">孤云 Guyun</a>
-      <a href="https://github.com/jianghui1974">GitHub</a>
-    </nav>
+    <div class="footer-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <img src="assets/mark.svg" alt="">
+          <span>Jianghui</span>
+        </div>
+        <p class="foot-tagline">两件小工具，数据都留在你手里。</p>
+
+        <div class="foot-about">
+          <p class="foot-about-lead">JIANG HUI · 独立开发者</p>
+          <p>Quileg 从 2024 年的第一代做到现在这一代，孤云是 2026 年的新作品。
+            其他作品与项目见 <a href="https://www.godar.cn" target="_blank" rel="noopener">godar.cn</a>。</p>
+          <p>问题、建议或合作：<a href="mailto:contact@airdiode.com">contact@airdiode.com</a></p>
+        </div>
+      </div>
+
+      <nav aria-label="本站">
+        <a href="#products">产品</a>
+        <a href="#how">做法</a>
+        <a href="#about">关于</a>
+        <a href="https://github.com/jianghui1974">GitHub</a>
+      </nav>
+
+      <nav aria-label="相关链接">
+        <a href="https://jianghui1974.github.io/Quileg-HID/">Quileg HID</a>
+        <a href="https://github.com/jianghui1974/Quileg-HID/releases">Quileg 更新日志</a>
+        <a href="https://jianghui1974.github.io/Guyun/">孤云 Guyun</a>
+        <a href="https://www.godar.cn" target="_blank" rel="noopener">作者主页</a>
+        <a href="en/" hreflang="en" lang="en">English</a>
+      </nav>
+    </div>
+
+    <p class="legal">
+      © <span id="year">2026</span> Jianghui. 保留所有权利。Quileg HID 与孤云均为免费提供的软件。<br>
+      两个应用都只在你自己的设备与账号范围内工作；请遵守相关平台的服务条款。软件按「现状」提供，不附带任何明示或暗示的担保。
+    </p>
+    <p class="legal trademark">与 Apple Inc. 无隶属关系。Apple、iPhone、iPad、macOS、AirPlay、App Store 等是 Apple Inc. 的商标。
+      第三方组件与许可全文见 <a href="https://jianghui1974.github.io/Quileg-HID/docs/licenses.html">Quileg HID 许可页</a>。</p>
   </div>
 </footer>
 
@@ -207,6 +246,10 @@
     }
   ]
 }
+</script>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
