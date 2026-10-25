@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jianghui — 两个小工具，数据都留在你手里</title>
+<meta name="description" content="Quileg HID：让 AI 真正操作你的 iPhone。孤云 Guyun：把文件存进你自己的对象存储。两个应用都免费，都不经过第三方服务器。">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1113" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="apple-touch-icon" href="assets/mark.svg">
+<link rel="stylesheet" href="styles.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jianghui">
+<meta property="og:title" content="Jianghui — 两个小工具，数据都留在你手里">
+<meta property="og:description" content="Quileg HID：让 AI 真正操作你的 iPhone。孤云 Guyun：把文件存进你自己的对象存储。">
+<meta property="og:url" content="https://jianghui1974.github.io/">
+<meta property="og:image" content="https://jianghui1974.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="assets/mark.svg" alt="" width="30" height="30">
+      <span>Jianghui</span>
+    </a>
+    <nav>
+      <a href="#products">产品</a>
+      <a href="#how">做法</a>
+      <a href="#about">关于</a>
+      <a class="gh" href="https://github.com/jianghui1974">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">iOS · iPadOS · macOS</p>
+      <h1>两件小工具，<br>数据都留在<em>你</em>手里。</h1>
+      <p class="lede">
+        一个让 AI 真正操作你的 iPhone，一个让你的文件躺进自己的桶里。
+        都免费，都没有我的服务器。
+      </p>
+      <ul class="stats">
+        <li><b>2</b> 个产品</li>
+        <li><b>免费</b> 下载</li>
+        <li><b>无</b> 账号</li>
+        <li><b>无</b> 中转服务器</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section id="products" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>产品</h2>
+        <p>一个管「手」，一个管「文件」。都在你自己的设备上完成。</p>
+      </div>
+
+      <div class="cards">
+
+        <article class="card card-quileg">
+          <div class="card-top">
+            <img class="app-icon" src="assets/quileg-icon.png" alt="Quileg HID 应用图标" width="56" height="56">
+            <div>
+              <p class="kicker">macOS 应用</p>
+              <h3>Quileg HID</h3>
+            </div>
+          </div>
+          <p class="tagline">让 AI 真正操作你的 iPhone</p>
+          <p class="desc">
+            投屏把画面给 AI 看，一块 ESP32-S3 板子伪装成蓝牙键盘和鼠标，替它去「按」。
+            点按、长按、打字、翻页都行，每一步都重新看一眼屏幕确认。
+          </p>
+          <ul class="facts">
+            <li>macOS 13+ · Apple 芯片 / Intel</li>
+            <li>需要一块 ESP32-S3 开发板（约 ¥30–60）</li>
+            <li>控制服务只监听本机 <code>127.0.0.1:8890</code></li>
+          </ul>
+          <div class="card-actions">
+            <a class="go" href="https://jianghui1974.github.io/Quileg-HID/">打开官网 <span aria-hidden="true">→</span></a>
+            <a class="alt" href="https://github.com/jianghui1974/Quileg-HID/releases/latest">下载</a>
+          </div>
+        </article>
+
+        <article class="card card-guyun">
+          <div class="card-top">
+            <img class="app-icon" src="assets/guyun-icon.png" alt="孤云 Guyun 应用图标" width="56" height="56">
+            <div>
+              <p class="kicker">iPhone · iPad · Mac</p>
+              <h3>孤云 Guyun</h3>
+            </div>
+          </div>
+          <p class="tagline">你的文件，就在你自己的桶里</p>
+          <p class="desc">
+            连上你自己的对象存储——阿里云 OSS、腾讯云 COS、Cloudflare R2、Backblaze B2、
+            MinIO，或任何 S3 兼容服务。没有账号体系，密钥只留在这台设备的钥匙串里。
+          </p>
+          <ul class="facts">
+            <li>iOS 17 / iPadOS 17 / macOS 14 及以上</li>
+            <li>应用免费，存储按服务商牌价</li>
+            <li>没有中转服务器，文件从设备直达你的桶</li>
+          </ul>
+          <div class="card-actions">
+            <a class="go" href="https://jianghui1974.github.io/Guyun/">打开官网 <span aria-hidden="true">→</span></a>
+            <a class="alt" href="https://jianghui1974.github.io/Guyun/#download">App Store</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW ============ -->
+  <section id="how" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>两个产品，同一套做法</h2>
+        <p>能少一层服务器，就少一层。</p>
+      </div>
+
+      <ol class="principles">
+        <li>
+          <span class="num">01</span>
+          <h3>本地优先</h3>
+          <p>Quileg HID 的控制服务只监听 <code>127.0.0.1</code>，画面和操作不出你的电脑；孤云没有中转服务器，请求从这台设备直达你自己的桶。</p>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <h3>不碰你的数据</h3>
+          <p>孤云没有账号体系、没有我们的服务器、没有遥测，密钥只留在这台设备的钥匙串里；Quileg HID 的画面与操作只在本机处理。</p>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <h3>应用免费</h3>
+          <p>要花的钱只有两处，而且都花在你自己手里：一块 ¥30–60 的 ESP32-S3 板子，或者你那个桶的存储账单。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section about">
+    <div class="wrap about-grid">
+      <div>
+        <h2>关于</h2>
+        <p>
+          这里放的是我做的两个工具。它们解决的是同一类问题：把原本要交给别人服务器的事，
+          放回你自己的设备上。
+        </p>
+        <p class="muted">
+          用起来有问题，或者想要什么功能，去 GitHub 提 issue 最直接——两个仓库都开着。
+        </p>
+      </div>
+      <ul class="links">
+        <li><a href="https://github.com/jianghui1974"><span>GitHub</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/jianghui1974/Quileg-HID"><span>Quileg HID 仓库</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/jianghui1974/Guyun"><span>孤云网站仓库</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="copy">© 2026 Jianghui</p>
+    <nav>
+      <a href="https://jianghui1974.github.io/Quileg-HID/">Quileg HID</a>
+      <a href="https://jianghui1974.github.io/Guyun/">孤云 Guyun</a>
+      <a href="https://github.com/jianghui1974">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Jianghui 的产品",
+  "itemListElement": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Quileg HID",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "macOS",
+      "description": "让 AI 通过投屏与蓝牙键鼠操作 iPhone 的 macOS 应用。",
+      "url": "https://jianghui1974.github.io/Quileg-HID/",
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"}
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "孤云 Guyun",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "iOS, iPadOS, macOS",
+      "description": "连接你自己 S3 兼容对象存储的文件管理器。",
+      "url": "https://jianghui1974.github.io/Guyun/",
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"}
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

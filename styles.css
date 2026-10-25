@@ -1,0 +1,443 @@
+/* Jianghui · 总主页
+   配色取自两个产品：Quileg HID 的亮蓝 #1f6bff、孤云的青绿 #1f7573。
+   页面本身保持中性，让两个品牌色只出现在各自的卡片上。 */
+
+:root {
+  --bg: #fbfaf8;
+  --card: #ffffff;
+  --ink: #14161a;
+  --muted: #5d6470;
+  --line: rgba(20, 22, 26, 0.10);
+  --line-soft: rgba(20, 22, 26, 0.06);
+
+  --quileg: #1f6bff;
+  --quileg-soft: #eef3ff;
+  --guyun: #1f7573;
+  --guyun-soft: #eaf3f1;
+
+  --radius: 22px;
+  --wrap: 1060px;
+  --shadow: 0 1px 2px rgba(20, 22, 26, 0.04), 0 30px 60px -40px rgba(20, 22, 26, 0.45);
+  --shadow-lift: 0 2px 4px rgba(20, 22, 26, 0.05), 0 34px 64px -36px rgba(20, 22, 26, 0.5);
+
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1113;
+    --card: #16191c;
+    --ink: #edf0f3;
+    --muted: #9aa3ae;
+    --line: rgba(255, 255, 255, 0.11);
+    --line-soft: rgba(255, 255, 255, 0.06);
+
+    --quileg: #6c9bff;
+    --quileg-soft: #16233c;
+    --guyun: #58b8b2;
+    --guyun-soft: #142c2a;
+
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 30px 60px -40px rgba(0, 0, 0, 0.9);
+    --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.55), 0 34px 64px -36px rgba(0, 0, 0, 0.95);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+p { margin: 0; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--line-soft);
+  padding: 0.1em 0.4em;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--ink); color: var(--bg);
+  padding: 10px 16px; border-radius: 0 0 10px 0;
+}
+.skip:focus { left: 0; }
+
+:focus-visible {
+  outline: 2px solid var(--quileg);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+  position: sticky; top: 0; z-index: 60;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.site-header .wrap {
+  display: flex; align-items: center; gap: 12px; height: 64px;
+}
+
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 700; font-size: 17.5px; letter-spacing: 0.4px;
+}
+.brand img { width: 30px; height: 30px; display: block; }
+
+.site-header nav {
+  margin-left: auto;
+  display: flex; align-items: center; gap: 22px;
+  font-size: 14.5px; color: var(--muted);
+}
+.site-header nav a { transition: color 0.15s ease; }
+.site-header nav a:hover { color: var(--ink); }
+.site-header nav .gh {
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 13px;
+  font-size: 13.5px;
+  background: var(--card);
+}
+.site-header nav .gh:hover { border-color: color-mix(in srgb, var(--ink) 30%, transparent); }
+
+/* ---------- hero ---------- */
+
+.hero {
+  padding: 88px 0 56px;
+  background:
+    radial-gradient(720px 380px at 8% -16%, color-mix(in srgb, var(--quileg) 13%, transparent), transparent 62%),
+    radial-gradient(680px 360px at 96% -12%, color-mix(in srgb, var(--guyun) 13%, transparent), transparent 62%);
+}
+
+.eyebrow {
+  margin: 0 0 20px;
+  font-size: 13px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin: 0 0 22px;
+  font-size: clamp(34px, 5.8vw, 62px);
+  line-height: 1.14;
+  letter-spacing: -1.6px;
+  font-weight: 800;
+}
+
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(100deg, var(--quileg), var(--guyun));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero .lede {
+  max-width: 30em;
+  font-size: 17.5px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.stats {
+  list-style: none;
+  display: flex; flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 34px 0 0;
+  padding: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+.stats li { display: flex; align-items: baseline; gap: 7px; }
+.stats b { color: var(--ink); font-size: 15px; font-weight: 700; }
+
+/* ---------- sections ---------- */
+
+.section { padding: 64px 0; }
+
+.section-head { margin-bottom: 32px; }
+.section-head h2 {
+  margin: 0 0 8px;
+  font-size: clamp(24px, 3vw, 30px);
+  letter-spacing: -0.6px;
+  line-height: 1.3;
+}
+.section-head p { color: var(--muted); font-size: 15.5px; }
+
+/* ---------- product cards ---------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 26px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute; inset: 0 0 auto;
+  height: 3px;
+  background: var(--accent);
+  opacity: 0.9;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.card-quileg { --accent: var(--quileg); --accent-soft: var(--quileg-soft); }
+.card-guyun { --accent: var(--guyun); --accent-soft: var(--guyun-soft); }
+
+.card-top {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 22px;
+}
+
+.app-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  display: block;
+  box-shadow: 0 6px 16px -8px rgba(0, 0, 0, 0.45);
+  flex: none;
+}
+
+.kicker {
+  margin: 0 0 2px;
+  font-size: 12px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.4px;
+  line-height: 1.3;
+}
+
+.tagline {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.desc {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.facts {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 9px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.facts li {
+  position: relative;
+  padding-left: 16px;
+  line-height: 1.6;
+}
+.facts li::before {
+  content: "";
+  position: absolute; left: 1px; top: 0.62em;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.card-actions {
+  display: flex; align-items: center; gap: 16px;
+  margin-top: auto;
+  padding-top: 26px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.go { color: var(--accent); display: inline-flex; align-items: center; gap: 6px; }
+.go span { transition: transform 0.18s ease; }
+.card:hover .go span { transform: translateX(4px); }
+
+/* 让整张卡片可点，同时不嵌套 <a> */
+.go::after { content: ""; position: absolute; inset: 0; }
+
+.alt {
+  position: relative; z-index: 1;
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1px;
+}
+.alt:hover { color: var(--ink); border-color: color-mix(in srgb, var(--ink) 40%, transparent); }
+
+/* ---------- principles ---------- */
+
+.principles {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  counter-reset: p;
+}
+
+.principles li {
+  position: relative;
+  padding: 26px 24px;
+  border: 1px solid var(--line-soft);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--card) 60%, transparent);
+}
+
+.num {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.principles h3 {
+  margin: 0 0 8px;
+  font-size: 17.5px;
+  letter-spacing: -0.2px;
+}
+
+.principles p {
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* ---------- about ---------- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about h2 {
+  margin: 0 0 14px;
+  font-size: clamp(24px, 3vw, 30px);
+  letter-spacing: -0.6px;
+}
+
+.about p { font-size: 16px; max-width: 32em; }
+.about p + p { margin-top: 14px; }
+.about .muted { color: var(--muted); font-size: 15px; }
+
+.links {
+  list-style: none;
+  margin: 0; padding: 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.links a {
+  display: flex; align-items: center; gap: 16px;
+  padding: 13px 2px;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 15px;
+  transition: color 0.15s ease, padding 0.15s ease;
+}
+.links a:hover { color: var(--quileg); padding-left: 6px; }
+
+.arrow { margin-left: auto; color: var(--muted); font-size: 13px; }
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  margin-top: 40px;
+  padding: 28px 0 40px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.site-footer .wrap {
+  display: flex; flex-wrap: wrap; gap: 12px 24px;
+  align-items: center;
+}
+
+.site-footer nav {
+  margin-left: auto;
+  display: flex; flex-wrap: wrap; gap: 18px;
+}
+.site-footer nav a:hover { color: var(--ink); }
+
+/* ---------- narrow ---------- */
+
+@media (max-width: 760px) {
+  .hero { padding: 64px 0 48px; }
+  .section { padding: 48px 0; }
+  .about-grid { grid-template-columns: 1fr; gap: 28px; }
+  .site-header nav { gap: 16px; }
+  .site-header nav a:not(.gh) { display: none; }
+  .card { padding: 26px 22px 22px; }
+  .tagline { font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card, .go span, .links a { transition: none; }
+  .card:hover { transform: none; }
+}
+
+@media (prefers-contrast: more) {
+  :root { --line: rgba(20, 22, 26, 0.3); --muted: #454b55; }
+}
