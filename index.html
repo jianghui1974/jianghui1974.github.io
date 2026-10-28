@@ -56,7 +56,7 @@
         都免费，都没有我的服务器。
       </p>
       <ul class="stats">
-        <li><b>2</b> 个产品</li>
+        <li><b>3</b> 个项目</li>
         <li><b>免费</b> 下载</li>
         <li><b>无</b> 账号</li>
         <li><b>无</b> 中转服务器</li>
@@ -69,7 +69,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2>产品</h2>
-        <p>一个管「手」，一个管「文件」。都在你自己的设备上完成。</p>
+        <p>一个管「手」，一个管「文件」，最后一段是它们的前身。都在你自己的设备上完成。</p>
       </div>
 
       <div class="cards">
@@ -122,6 +122,35 @@
           </div>
         </article>
 
+        <article class="card card-archive">
+          <div class="arch-main">
+            <div class="card-top">
+              <img class="app-icon" src="assets/quileg-stm32.svg" alt="Quileg STM32 图标" width="56" height="56">
+              <div>
+                <p class="kicker">开源归档 · 2024–2025</p>
+                <h3>Quileg STM32</h3>
+              </div>
+            </div>
+            <p class="tagline">让电脑自己动手</p>
+            <p class="desc">
+              一台以标准 USB 键鼠身份工作的小设备：流程在网页里编排，经串口发给板子，
+              固件把它变成真实的按键与位移。目标软件不需要任何接口，电脑上也不用装客户端。
+              前两代的固件、网页上位机与串口协议，按当年最终版本以 MIT 开源。
+            </p>
+          </div>
+          <div class="arch-side">
+            <ul class="facts">
+              <li>MIT 许可 · STM32F103C8T6</li>
+              <li>已停止维护，只作学习与复刻</li>
+              <li>第三代是 Quileg HID：走蓝牙，目标是手机</li>
+            </ul>
+            <div class="card-actions">
+              <a class="go" href="https://jianghui1974.github.io/Quileg-STM32/">开源归档站 <span aria-hidden="true">→</span></a>
+              <a class="alt" href="https://github.com/jianghui1974/Quileg-STM32">源码</a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -171,6 +200,7 @@
         <li><a href="https://github.com/jianghui1974"><span>GitHub</span><span class="arrow" aria-hidden="true">↗</span></a></li>
         <li><a href="https://github.com/jianghui1974/Quileg-HID"><span>Quileg HID 仓库</span><span class="arrow" aria-hidden="true">↗</span></a></li>
         <li><a href="https://github.com/jianghui1974/Guyun"><span>孤云网站仓库</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/jianghui1974/Quileg-STM32"><span>Quileg STM32 仓库（开源）</span><span class="arrow" aria-hidden="true">↗</span></a></li>
       </ul>
     </div>
   </section>
@@ -206,6 +236,7 @@
         <a href="https://jianghui1974.github.io/Quileg-HID/">Quileg HID</a>
         <a href="https://github.com/jianghui1974/Quileg-HID/releases">Quileg 更新日志</a>
         <a href="https://jianghui1974.github.io/Guyun/">孤云 Guyun</a>
+        <a href="https://jianghui1974.github.io/Quileg-STM32/">Quileg STM32（开源）</a>
         <a href="https://www.godar.cn" target="_blank" rel="noopener">作者主页</a>
         <a href="en/" hreflang="en" lang="en">English</a>
       </nav>
@@ -224,7 +255,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Jianghui 的产品",
+  "name": "Jianghui 的项目",
   "itemListElement": [
     {
       "@type": "SoftwareApplication",
@@ -243,6 +274,14 @@
       "description": "连接你自己 S3 兼容对象存储的文件管理器。",
       "url": "https://jianghui1974.github.io/Guyun/",
       "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"}
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Quileg STM32",
+      "description": "第一代 / 第二代 Quileg 键鼠模拟器的固件、网页上位机与串口协议，按当年最终版本以 MIT 开源归档。",
+      "codeRepository": "https://github.com/jianghui1974/Quileg-STM32",
+      "license": "https://opensource.org/licenses/MIT",
+      "programmingLanguage": "C"
     }
   ]
 }

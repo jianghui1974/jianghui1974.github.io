@@ -14,6 +14,8 @@
   --quileg-soft: #eef3ff;
   --guyun: #1f7573;
   --guyun-soft: #eaf3f1;
+  --orange: #ff7a29;
+  --orange-soft: #fff2e6;
 
   --radius: 22px;
   --wrap: 1060px;
@@ -37,6 +39,8 @@
     --quileg-soft: #16233c;
     --guyun: #58b8b2;
     --guyun-soft: #142c2a;
+    --orange: #ff9a5a;
+    --orange-soft: #2a1a10;
 
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 30px 60px -40px rgba(0, 0, 0, 0.9);
     --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.55), 0 34px 64px -36px rgba(0, 0, 0, 0.95);
@@ -206,7 +210,7 @@ code {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
 }
 
@@ -239,6 +243,19 @@ code {
 
 .card-quileg { --accent: var(--quileg); --accent-soft: var(--quileg-soft); }
 .card-guyun { --accent: var(--guyun); --accent-soft: var(--guyun-soft); }
+.card-archive { --accent: var(--orange); --accent-soft: var(--orange-soft); }
+
+/* 归档条目：整行铺开，左边叙事、右边事实与入口 */
+.card-archive {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 22px 44px;
+  align-items: start;
+}
+.card-archive .desc { max-width: 44em; }
+.arch-side { display: flex; flex-direction: column; gap: 20px; }
+.arch-side .card-actions { margin-top: 0; padding-top: 0; }
 
 .card-top {
   display: flex; align-items: center; gap: 14px;
@@ -479,7 +496,9 @@ code {
   .hero { padding: 64px 0 48px; }
   .section { padding: 48px 0; }
   .about-grid { grid-template-columns: 1fr; gap: 28px; }
+  .cards { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .card-archive { grid-template-columns: 1fr; gap: 18px; }
   .site-footer nav { flex-direction: row; flex-wrap: wrap; gap: 8px 18px; }
   .site-footer { margin-top: 48px; padding-top: 40px; }
   .site-header nav { gap: 16px; }

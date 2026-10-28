@@ -7,6 +7,10 @@ GitHub Pages 的用户站点，对应 <https://jianghui1974.github.io/>。
 |---|---|---|
 | Quileg HID | `jianghui1974/Quileg-HID` | <https://jianghui1974.github.io/Quileg-HID/> |
 | 孤云 Guyun | `jianghui1974/Guyun` | <https://jianghui1974.github.io/Guyun/> |
+| Quileg STM32（开源归档） | `jianghui1974/Quileg-STM32` | <https://jianghui1974.github.io/Quileg-STM32/> |
+
+主页列的是「两件在做的工具 + 一段已归档的前身」：前两个是卡片，
+STM32 用整行铺开的归档条目（`.card-archive`），橙色是它自己的色彩。
 
 仓库名必须是 `jianghui1974.github.io`，Pages 才会把它挂在根域名上。
 
@@ -19,7 +23,7 @@ styles.css        全部样式，含深色模式、页脚
 assets/mark.svg   站点标记（蓝 + 青两个方块）与 favicon
 assets/og.png     中文分享卡片图 1200×630
 assets/og-en.png  英文分享卡片图
-assets/*-icon.png 两个产品的图标（从各自站点取，256px / 180px）
+assets/*-icon.png 产品图标（从各自站点取）；STM32 直接用对方的 logo.svg
 og.html           og.png 的源文件，用浏览器截图得到，不对外链接
 og-en.html        og-en.png 的源文件
 preview-*.png     本地预览截图，已 gitignore

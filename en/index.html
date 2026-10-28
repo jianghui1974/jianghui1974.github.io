@@ -56,7 +56,7 @@
         Both are free, and neither talks to a server of mine.
       </p>
       <ul class="stats">
-        <li><b>2</b> products</li>
+        <li><b>3</b> projects</li>
         <li><b>Free</b> to download</li>
         <li><b>No</b> accounts</li>
         <li><b>No</b> relay server</li>
@@ -69,7 +69,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2>Products</h2>
-        <p>One handles hands, one handles files. Both finish the job on your own devices.</p>
+        <p>One handles hands, one handles files, and the last one is where they came from. All of it runs on your own devices.</p>
       </div>
 
       <div class="cards">
@@ -124,6 +124,37 @@
           </div>
         </article>
 
+        <article class="card card-archive">
+          <div class="arch-main">
+            <div class="card-top">
+              <img class="app-icon" src="../assets/quileg-stm32.svg" alt="Quileg STM32 icon" width="56" height="56">
+              <div>
+                <p class="kicker">Open source archive · 2024–2025</p>
+                <h3>Quileg STM32</h3>
+              </div>
+            </div>
+            <p class="tagline">Let the computer do the tapping</p>
+            <p class="desc">
+              A small device that presents itself as a standard USB keyboard and mouse: you compose
+              the routine in a web page, it travels over serial to the board, and the firmware turns
+              it into real key presses and pointer movement. No API on the target, no client on the
+              computer. Firmware, web host and serial protocol for the first two generations,
+              released under MIT as they were.
+            </p>
+          </div>
+          <div class="arch-side">
+            <ul class="facts">
+              <li>MIT licence · STM32F103C8T6</li>
+              <li>Archived — no support, kept for learning and rebuilding</li>
+              <li>Generation three is Quileg HID: Bluetooth, and the target is the phone</li>
+            </ul>
+            <div class="card-actions">
+              <a class="go" href="https://jianghui1974.github.io/Quileg-STM32/">Visit the archive <span aria-hidden="true">→</span></a>
+              <a class="alt" href="https://github.com/jianghui1974/Quileg-STM32">Source</a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -174,6 +205,7 @@
         <li><a href="https://github.com/jianghui1974"><span>GitHub</span><span class="arrow" aria-hidden="true">↗</span></a></li>
         <li><a href="https://github.com/jianghui1974/Quileg-HID"><span>Quileg HID repository</span><span class="arrow" aria-hidden="true">↗</span></a></li>
         <li><a href="https://github.com/jianghui1974/Guyun"><span>Guyun site repository</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/jianghui1974/Quileg-STM32"><span>Quileg STM32 repository (open source)</span><span class="arrow" aria-hidden="true">↗</span></a></li>
       </ul>
     </div>
   </section>
@@ -211,6 +243,7 @@
         <a href="https://jianghui1974.github.io/Quileg-HID/en/">Quileg HID</a>
         <a href="https://github.com/jianghui1974/Quileg-HID/releases">Quileg changelog</a>
         <a href="https://jianghui1974.github.io/Guyun/en/">Guyun</a>
+        <a href="https://jianghui1974.github.io/Quileg-STM32/">Quileg STM32 (open source)</a>
         <a href="https://www.godar.cn" target="_blank" rel="noopener">Author's site</a>
         <a href="../" hreflang="zh-Hans" lang="zh-CN">中文</a>
       </nav>
@@ -232,7 +265,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Jianghui products",
+  "name": "Jianghui projects",
   "itemListElement": [
     {
       "@type": "SoftwareApplication",
@@ -251,6 +284,14 @@
       "description": "A file manager for your own S3-compatible object storage.",
       "url": "https://jianghui1974.github.io/Guyun/en/",
       "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"}
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Quileg STM32",
+      "description": "Firmware, web host and serial protocol for the first two generations of the Quileg keyboard-and-mouse simulator, archived under MIT.",
+      "codeRepository": "https://github.com/jianghui1974/Quileg-STM32",
+      "license": "https://opensource.org/licenses/MIT",
+      "programmingLanguage": "C"
     }
   ]
 }
